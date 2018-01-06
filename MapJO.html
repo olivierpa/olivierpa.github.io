@@ -40,9 +40,62 @@ section:last-child {
     border-bottom: none;
     margin-bottom: 200px;
 }
+
+.map-overlay {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 25%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+.map-overlay .map-overlay-inner {
+    background-color: #fff;
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.map-overlay h2 {
+    line-height: 24px;
+    display: block;
+    margin: 0 0 10px;
+}
+
+.map-overlay .legend .bar {
+    height: 10px;
+    width: 100%;
+    background: linear-gradient(to right, #1F487E, #CA4738);
+}
+
+.map-overlay input {
+    background-color: transparent;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    cursor: ew-resize;
+}
 </style>
 
 <div id='map'></div>
+
+<div class='map-overlay top'>
+    <div class='map-overlay-inner'>
+        <h2>Médias</h2>
+        <label id='month'></label>
+        <input id='slider' type='range' min='0' max='4' step='1' value='0' />
+    </div>
+    <div class='map-overlay-inner'>
+        <div id='legend' class='legend'>
+            <div class='bar'></div>
+            <div>Différé | Direct</div>
+        </div>
+    </div>
+</div>
+
 <div id='features'>
     <section id='1924' class='active'>
         <h3>Paris 1924</h3>
@@ -72,6 +125,24 @@ var map = new mapboxgl.Map({
     bearing: 27,
     pitch: 45
 });
+
+var months = [
+    'Cinéma',
+    'Affiche',
+    'Radio',
+    'Télévison',
+    'Internet'
+];
+
+function filterBy(month) {
+
+    var filters = ['==', 'month', month];
+    map.setFilter('earthquake-circles', filters);
+    map.setFilter('earthquake-labels', filters);
+
+    // Set the label to the month
+    document.getElementById('month').textContent = months[month];
+}
 
 var chapters = {
     '1924': {
@@ -132,6 +203,29 @@ function isElementOnScreen(id) {
 }
 
 map.on('load', function() {
+    map.addLayer({
+            'id': 'earthquake-labels',
+            'type': 'symbol',
+            'source': 'earthquakes',
+            'layout': {
+                'text-field': '{mag}m',
+                'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+                'text-size': 12
+            },
+            'paint': {
+                'text-color': 'rgba(0,0,0,0.5)'
+            }
+        });
+
+        // Set filter to first month of the year
+        // 0 = January
+        filterBy(0);
+
+        document.getElementById('slider').addEventListener('input', function(e) {
+            var month = parseInt(e.target.value, 10);
+            filterBy(month);
+        });
+
     map.addLayer({
         'id': 'maine',
         'type': 'fill',

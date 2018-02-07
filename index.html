@@ -14,6 +14,9 @@
 <body>
 
 <div id="container">
+	<video autoplay loop muted id="background">
+		<source src="img/backvid.mp4" type="video/mp4">
+	</video>
 
 <nav class="navbar fixed-top navbar-inverse bg-inverse">
 	<div class="mx-auto d-block">
@@ -50,9 +53,7 @@
 		  </a>
 		</h1>
 
-		<video autoplay loop muted id="background">
-			<source src="img/backvid.mp4" type="video/mp4">
-		</video>
+		
 		<!-- <div style="width: 100%; position: absolute; text-align: center; top: 90vh; margin: 0 auto; left: 0; right: 0">
 			<a href="#2"><img src="img/down.png" style="transform: rotate(180deg)" alt="Down"></a>
 		</div> -->
@@ -72,7 +73,7 @@
 			<p style="padding: 2%">Coming soon...</p>
 		</div>
 
-		<div id="carousel1" class="carousel slide" data-ride="carousel">
+		<div id="carousel1" class="carousel slide reveal" data-ride="carousel">
 		  <ol class="carousel-indicators">
 		    <li data-target="#carousel1" data-slide-to="0" class="active"></li>
 		    <li data-target="#carousel1" data-slide-to="1"></li>
@@ -121,7 +122,7 @@
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
 		</div>
 
-		<div id="carousel2" class="carousel slide" data-ride="carousel">
+		<div id="carousel2" class="carousel slide reveal" data-ride="carousel">
 		  <ol class="carousel-indicators">
 		    <li data-target="#carousel2" data-slide-to="0" class="active"></li>
 		    <li data-target="#carousel2" data-slide-to="1"></li>
@@ -161,7 +162,7 @@
 			<p style="padding: 2%">Coming soon...</p>
 		</div>
 
-		<div id="carousel3" class="carousel slide" data-ride="carousel">
+		<div id="carousel3" class="carousel slide reveal" data-ride="carousel">
 		  <ol class="carousel-indicators">
 		    <li data-target="#carousel3" data-slide-to="0" class="active"></li>
 		    <li data-target="#carousel3" data-slide-to="1"></li>
@@ -201,7 +202,7 @@
 			<p style="padding: 2%">Created as part of a Design Fiction course, these turtles embody a new way to fight the algae invasion in Martinique (French West Indies). They also play a role of community liaison with the population as both tourists and inhabitants can interact with them through a mobile app.</p>
 		</div>
 
-		<div id="carousel4" class="carousel slide" data-ride="carousel">
+		<div id="carousel4" class="carousel slide reveal" data-ride="carousel">
 		  <ol class="carousel-indicators">
 		    <li data-target="#carousel4" data-slide-to="0" class="active"></li>
 		    <li data-target="#carousel4" data-slide-to="1"></li>
@@ -241,7 +242,7 @@
 			<p style="padding: 2%">Coming soon...</p>
 		</div>
 
-		<div id="carousel5" class="carousel slide" data-ride="carousel">
+		<div id="carousel5" class="carousel slide reveal" data-ride="carousel">
 		  <ol class="carousel-indicators">
 		    <li data-target="#carousel5" data-slide-to="0" class="active"></li>
 		    <li data-target="#carousel5" data-slide-to="1"></li>
@@ -282,7 +283,7 @@
 		</div>
 		
 		<div class="slides">
-		<div id="carousel6" class="carousel slide" data-ride="carousel">
+		<div id="carousel6" class="carousel slide reveal" data-ride="carousel">
 		  <ol class="carousel-indicators">
 		    <li data-target="#carousel6" data-slide-to="0" class="active"></li>
 		    <li data-target="#carousel6" data-slide-to="1"></li>
@@ -314,7 +315,7 @@
 		</div>
 		</div>
 	</section>
-	<div style="height: 85vh">
+	<div style="height: 85vh" class="reveal">
 	<span id="8" style="opacity: 0">#</span>
 
 	<div class="container text-center" style="margin: 5% auto">
@@ -489,6 +490,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/scrollgress.js"></script>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script src="js/bootstrap-autohidingnavbar.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>

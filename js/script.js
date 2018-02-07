@@ -342,4 +342,10 @@ $(document).ready(function(){
 	});
 
 	$('[data-toggle="popover"]').popover();
+
+	window.sr = ScrollReveal({ 
+		reset: true,
+		distance: '-50px'
+	});
+	sr.reveal('.reveal');
 });

@@ -1121,3 +1121,9 @@ strong{
   transform: translateX(-50%);
   z-index: -9999999;
 }
+
+@media (min-width: 1024px) {
+  #bg{
+    display: none;
+  }
+}

@@ -22,7 +22,7 @@ body, html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
- 
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -80,7 +80,7 @@ body, html {
     opacity: 0.1;
 }
 
-.overlayCarousel { 
+.overlayCarousel {
   color:#fff;
   position:absolute;
   z-index:12;
@@ -88,8 +88,9 @@ body, html {
   left:0;
   width:100%;
   text-align:center;
-  letter-spacing: 10px;
   opacity: 1;
+  letter-spacing: 10px;
+  background-color: #111;
 }
 
 .overlayDiv{
@@ -101,7 +102,16 @@ body, html {
   opacity: 0.5;
 }
 
-.row { 
+.overlayDivDescription{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index:11;
+  background: #000;
+  opacity: 0.8;
+}
+
+.row {
   margin: auto;
 }
 
@@ -298,6 +308,22 @@ h1 {
   color: #fff;
   font-size: 2em;
 }
+
+.titleDescription{
+  font-size: 2em;
+  top:15vh;
+}
+
+.description{
+  position: absolute;
+  top: 28vh;
+  margin: 0 20%;
+  color: #fff;
+  opacity: 1;
+  line-height: 2em;
+  font-size: 80%;
+}
+
 /*h2 {
   margin: 0 auto;
   position: absolute;
@@ -521,6 +547,17 @@ strong{
   font-size: 70%;
 }
 
+.credits{
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.8em;
+  color: #ffffff;
+  opacity:1;
+}
+
 .textsection2{
   vertical-align: top;
   text-align: right;
@@ -547,7 +584,7 @@ strong{
 
 @media screen and (max-width: 643px) {
   .large { display: none; }
-  .min { display: block; } 
+  .min { display: block; }
 }
 
 .card-body{
@@ -1111,9 +1148,9 @@ strong{
 #bg img {
   position: absolute;
   height: 100%;
-  top: 0; 
-  right: 0; 
-  bottom: 0; 
+  top: 0;
+  right: 0;
+  bottom: 0;
   left: 50%;
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);

@@ -90,7 +90,7 @@ body, html {
   text-align:center;
   opacity: 1;
   letter-spacing: 10px;
-  background-color: #111;
+  /* background-color: #111; */
 }
 
 .overlayDiv{

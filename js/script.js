@@ -1,121 +1,5 @@
-$(document).ready(function(){
-	function vhTOpx(value) {
-	  var w = window,
-	    d = document,
-	    e = d.documentElement,
-	    g = d.getElementsByTagName('body')[0],
-	    y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-	 
-	  var result = (y*value)/100;
-	  return(result);
-	}
-	var px = vhTOpx(99);
-
-	$('[data-toggle="tooltip"]').tooltip();
-
-	$('body').scrollgress({
-		height: '2vh',
-		zIndex: '10',
-		color: 'lightgrey'
-	});
-
-	'use strict';
-  
-   var c, currentScrollTop = 0,
-       navbar = $('nav');
-
-   $(window).scroll(function () {
-      var a = $(window).scrollTop();
-      var b = navbar.height();
-     
-      currentScrollTop = a;
-     
-      if (c < currentScrollTop && a > b + b) {
-        navbar.addClass("scrollUp");
-      } else if (c > currentScrollTop && !(a <= b)) {
-        navbar.removeClass("scrollUp");
-      }
-
-      c = currentScrollTop;
-
-      if ($(".menu-collapsed").hasClass("menu-expanded")){
-      	navbar.removeClass("scrollUp");
-      }
-  	});
-
-	$(".menu-collapsed").click(function() {
-	  $(this).toggleClass("menu-expanded");
-	});
-
-	$(".circle").click(function() {
-		if ($(".menu-collapsed").hasClass("menu-expanded")){
-			$(".menu-collapsed").removeClass("menu-expanded");
-    	}
-	});
-
-	$(".carousel").carousel({interval: 0});
-
-	$(window).scroll(function() {
-	    if ($(document).scrollTop() > px && $(document).scrollTop() < px*2) {
-	      $(".a").css('background-color', 'gold');
-	      $(".a").css('box-shadow', '0px 1px 4px #888');
-	    } else {
-	      $(".a").css('background-color', 'white');
-	      $(".a").css('box-shadow', '0px 0px 0px #fff');
-	    }
-	});
-
-	$(window).scroll(function() {
-	    if ($(document).scrollTop() > px*2 && $(document).scrollTop() < px*3) {
-	      $(".b").css('background-color', 'gold');
-	      $(".b").css('box-shadow', '0px 1px 4px #888');
-	    } else {
-	      $(".b").css('background-color', 'white');
-	      $(".b").css('box-shadow', '0px 0px 0px #fff');
-	    }
-	});
-
-	$(window).scroll(function() {
-	    if ($(document).scrollTop() > px*3 && $(document).scrollTop() < px*4) {
-	      $(".c").css('background-color', 'gold');
-	      $(".c").css('box-shadow', '0px 1px 4px #888');
-	    } else {
-	      $(".c").css('background-color', 'white');
-	      $(".c").css('box-shadow', '0px 0px 0px #fff');
-	    }
-	});
-
-	$(window).scroll(function() {
-	    if ($(document).scrollTop() > px*4 && $(document).scrollTop() < px*5) {
-	      $(".d").css('background-color', 'gold');
-	      $(".d").css('box-shadow', '0px 1px 4px #888');
-	    } else {
-	      $(".d").css('background-color', 'white');
-	      $(".d").css('box-shadow', '0px 0px 0px #fff');
-	    }
-	});
-
-	$(window).scroll(function() {
-	    if ($(document).scrollTop() > px*5 && $(document).scrollTop() < px*6) {
-	      $(".e").css('background-color', 'gold');
-	      $(".e").css('box-shadow', '0px 1px 4px #888');
-	    } else {
-	      $(".e").css('background-color', 'white');
-	      $(".e").css('box-shadow', '0px 0px 0px #fff');
-	    }
-	});
-
-	$(window).scroll(function() {
-	    if ($(document).scrollTop() > px*6 && $(document).scrollTop() < px*7) {
-	      $(".f").css('background-color', 'gold');
-	      $(".f").css('box-shadow', '0px 1px 4px #888');
-	    } else {
-	      $(".f").css('background-color', 'white');
-	      $(".f").css('box-shadow', '0px 0px 0px #fff');
-	    }
-	});
-
-	var TxtType = function(el, toRotate, period) {
+$(document).ready(function() {
+  var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
         this.loopNum = 0;
@@ -172,180 +56,110 @@ $(document).ready(function(){
         document.body.appendChild(css);
     };
 
-    var btn = document.getElementById('btn');
-    var clipboard = new Clipboard(btn);
-    clipboard.on('success', function(e) {
-        console.log(e);
-    });
-    clipboard.on('error', function(e) {
-        console.log(e);
+    $("#projectsBtn").click(function(){
+      $(".overlay2").toggleClass("active2");
     });
 
-    $('.clickme[data-toggle="tooltip2"]').tooltip({
-	    animated: 'fade',
-	    placement: 'top',
-	    trigger: 'click'
-	});
+    $(".introSkills").click(function(){
+      $("#sec1").toggleClass("activePop");
+      $("#sec2").toggleClass("activePop");
+      $("#arrows1").toggleClass("activePop");
+      $("#arrows2").toggleClass("activePop");
 
-	$('.clickme').mouseleave(function(){
-    	$(this).tooltip('hide');
-	});
+      $(".introBtn").toggleClass("active1");
+      $(".skillsBtn").toggleClass("active1");
 
-	$('#bio').addClass("show");
+      $(".ttl1").toggleClass("active");
+      $(".ttl2").toggleClass("active");
+    });
+    $(".skillsExp").click(function(){
+      $("#sec2").toggleClass("activePop");
+      $("#sec3").toggleClass("activePop");
+      $("#arrows2").toggleClass("activePop");
+      $("#arrows3").toggleClass("activePop");
 
-	$(".btn1").click(function () {
-		$(".btn2").removeClass("active");
-		$(".btn3").removeClass("active");
-		$(".btn6").removeClass("active");
-		$(this).addClass("active");
-		$('#experiences').removeClass("show");
-		$('#bio').removeClass("show");
-		$('#tools').removeClass("show");
-		$('#experiences2').removeClass("show");
-		$('#tools2').removeClass("show");
-	});
-	$(".btn2").click(function () {
-		$(".btn1").removeClass("active");
-		$(".btn3").removeClass("active");
-		$(".btn6").removeClass("active");
-		$(this).addClass("active");
-		$('#experiences').removeClass("show");
-		$('#bio').removeClass("show");
-		$('#skills').removeClass("show");
-		$('#experiences2').removeClass("show");
-		$('#skills2').removeClass("show");
-	});
-	$(".btn3").click(function () {
-		$(".btn1").removeClass("active");
-		$(".btn2").removeClass("active");
-		$(".btn6").removeClass("active");
-		$(this).addClass("active");
-		// $('#skills').removeClass("show");
-		// $('#bio').removeClass("show");
-		// $('#tools').removeClass("show");
-		// $('#skills2').removeClass("show");
-		// $('#tools2').removeClass("show");
-	});
-	$(".btn4").click(function () {
-		$('#experiences2').removeClass("show");
+      $(".skillsBtn").toggleClass("active1");
+      $(".expBtn").toggleClass("active1");
 
-		$('#skills').removeClass("show");
-		$('#bio').removeClass("show");
-		$('#tools').removeClass("show");
-		$('#skills2').removeClass("show");
-		$('#tools2').removeClass("show");
-	});
-	$(".btn5").click(function () {
-		$('#experiences').removeClass("show");
+      $(".ttl2").toggleClass("active");
+      $(".ttl3").toggleClass("active");
+    });
 
-		$('#skills').removeClass("show");
-		$('#bio').removeClass("show");
-		$('#tools').removeClass("show");
-		$('#skills2').removeClass("show");
-		$('#tools2').removeClass("show");
-	});
-	$(".btn6").click(function () {
-		$(".btn1").removeClass("active");
-		$(".btn2").removeClass("active");
-		$(".btn3").removeClass("active");
-		$(this).addClass("active");
-		$('#skills').removeClass("show");
-		$('#experiences').removeClass("show");
-		$('#tools').removeClass("show");
-		$('#skills2').removeClass("show");
-		$('#experiences2').removeClass("show");
-		$('#tools2').removeClass("show");
-	});
+    $("#introBtn").click(function(){
+      $(".sec").removeClass("activePop");
+      $(".arrows").removeClass("activePop");
+      $(".txtMenuPop").removeClass("active1");
 
-	$("#btn1").click(function () {
-		if ($(this).hasClass("open")) {
-			$(this).removeClass("open");
-			document.getElementById("mySidenav1").style.width = "0";
-		    document.getElementById("btn1").style.right = "0";
-		    document.getElementById("arrow1").innerHTML = "❮<br>more";
-		} else{
-			$(this).addClass("open");
-			document.getElementById("mySidenav1").style.width = "250px";
-	    	document.getElementById("btn1").style.right = "250px";
-	    	document.getElementById("arrow1").innerHTML = "❯<br>less";
-		}
-	});
+      $("#sec1").addClass("activePop");
+      $("#arrows1").addClass("activePop");
+      $(".introBtn").addClass("active1");
 
-	$("#btn2").click(function () {
-		if ($(this).hasClass("open")) {
-			$(this).removeClass("open");
-			document.getElementById("mySidenav2").style.width = "0";
-		    document.getElementById("btn2").style.right = "0";
-		    document.getElementById("arrow2").innerHTML = "❮<br>more";
-		} else{
-			$(this).addClass("open");
-			document.getElementById("mySidenav2").style.width = "250px";
-	    	document.getElementById("btn2").style.right = "250px";
-	    	document.getElementById("arrow2").innerHTML = "❯<br>less";
-		}
-	});
+      $(".ttl").removeClass("active");
+      $(".ttl1").addClass("active");
+    });
 
-	$("#btn3").click(function () {
-		if ($(this).hasClass("open")) {
-			$(this).removeClass("open");
-			document.getElementById("mySidenav3").style.width = "0";
-		    document.getElementById("btn3").style.right = "0";
-		    document.getElementById("arrow3").innerHTML = "❮<br>more";
-		} else{
-			$(this).addClass("open");
-			document.getElementById("mySidenav3").style.width = "250px";
-	    	document.getElementById("btn3").style.right = "250px";
-	    	document.getElementById("arrow3").innerHTML = "❯<br>less";
-		}
-	});
+    $("#skillsBtn").click(function(){
+      $(".sec").removeClass("activePop");
+      $(".arrows").removeClass("activePop");
+      $(".txtMenuPop").removeClass("active1");
 
-	$("#btn4").click(function () {
-		if ($(this).hasClass("open")) {
-			$(this).removeClass("open");
-			document.getElementById("mySidenav4").style.width = "0";
-		    document.getElementById("btn4").style.right = "0";
-		    document.getElementById("arrow4").innerHTML = "❮<br>more";
-		} else{
-			$(this).addClass("open");
-			document.getElementById("mySidenav4").style.width = "250px";
-	    	document.getElementById("btn4").style.right = "250px";
-	    	document.getElementById("arrow4").innerHTML = "❯<br>less";
-		}
-	});
+      $("#sec2").addClass("activePop");
+      $("#arrows2").addClass("activePop");
+      $(".skillsBtn").addClass("active1");
 
-	$("#btn5").click(function () {
-		if ($(this).hasClass("open")) {
-			$(this).removeClass("open");
-			document.getElementById("mySidenav5").style.width = "0";
-		    document.getElementById("btn5").style.right = "0";
-		    document.getElementById("arrow5").innerHTML = "❮<br>more";
-		} else{
-			$(this).addClass("open");
-			document.getElementById("mySidenav5").style.width = "250px";
-	    	document.getElementById("btn5").style.right = "250px";
-	    	document.getElementById("arrow5").innerHTML = "❯<br>less";
-		}
-	});
+      $(".ttl").removeClass("active");
+      $(".ttl2").addClass("active");
+    });
 
-	$("#btn6").click(function () {
-		if ($(this).hasClass("open")) {
-			$(this).removeClass("open");
-			document.getElementById("mySidenav6").style.width = "0";
-		    document.getElementById("btn6").style.right = "0";
-		    document.getElementById("arrow6").innerHTML = "❮<br>more";
-		} else{
-			$(this).addClass("open");
-			document.getElementById("mySidenav6").style.width = "250px";
-	    	document.getElementById("btn6").style.right = "250px";
-	    	document.getElementById("arrow6").innerHTML = "❯<br>less";
-		}
-	});
+    $("#expBtn").click(function(){
+      $(".sec").removeClass("activePop");
+      $(".arrows").removeClass("activePop");
+      $(".txtMenuPop").removeClass("active1");
 
-	$('[data-toggle="popover"]').popover();
+      $("#sec3").addClass("activePop");
+      $("#arrows3").addClass("activePop");
+      $(".expBtn").addClass("active1");
 
-	window.sr = ScrollReveal({ 
-		reset: true,
-		distance: '-50px'
-	});
-	sr.reveal('.reveal');
+      $(".ttl").removeClass("active");
+      $(".ttl3").addClass("active");
+    });
+
+    $(window).scroll(function(){
+        var ScrollTop = parseInt($(window).scrollTop());
+
+        if (ScrollTop > 99 * window.innerHeight/100 && ScrollTop < 399 * window.innerHeight/100) {
+          $(".lineMenu").addClass("inactive");
+          $(".illMenu").removeClass("inactive");
+        } else if (ScrollTop > 399 * window.innerHeight/100 && ScrollTop < 699 * window.innerHeight/100) {
+          $(".lineMenu").addClass("inactive");
+          $(".meMenu").removeClass("inactive");
+        } else if (ScrollTop > 699 * window.innerHeight/100 && ScrollTop < 1099 * window.innerHeight/100) {
+          $(".lineMenu").addClass("inactive");
+          $(".paMenu").removeClass("inactive");
+        } else if (ScrollTop > 1099 * window.innerHeight/100 && ScrollTop < 1399 * window.innerHeight/100) {
+          $(".lineMenu").addClass("inactive");
+          $(".trMenu").removeClass("inactive");
+        } else if (ScrollTop > 1399 * window.innerHeight/100 && ScrollTop < 1699 * window.innerHeight/100) {
+          $(".lineMenu").addClass("inactive");
+          $(".fuMenu").removeClass("inactive");
+        } else if (ScrollTop > 1699 * window.innerHeight/100 && ScrollTop < 1999 * window.innerHeight/100) {
+          $(".lineMenu").addClass("inactive");
+          $(".miMenu").removeClass("inactive");
+        } else {
+          $(".lineMenu").removeClass("inactive");
+        }
+    });
+
+    new ClipboardJS('#emailBtn');
+
+    $(".menuIcon").click(function(){
+      $(".barUno").toggleClass("change");
+      $(".barDuo").toggleClass("change");
+    });
+
+    $(".mobileLink").click(function(){
+      $(".overlay2").toggleClass("active2");
+      $(".barUno").toggleClass("change");
+      $(".barDuo").toggleClass("change");
+    });
 });

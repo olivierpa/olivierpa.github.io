@@ -86,7 +86,7 @@ if touchScroll is false - update index
       setHeights: true,
       overflowScroll: true,
       updateHash: true,
-      touchScroll:true,
+      touchScroll:false,
       before:function() {
 
       },

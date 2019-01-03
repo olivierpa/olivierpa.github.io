@@ -65,7 +65,7 @@ if touchScroll is false - update index
     manualScroll,
     swipeScroll,
     util,
-    disabled = false,
+    disabled = true,
     scrollSamples = [],
     scrollTime = new Date().getTime(),
     firstLoad = true,

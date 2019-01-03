@@ -80,6 +80,10 @@ body, html {
     display: none;
   }
 
+  .imgBox p{
+    text-shadow: 1px 1px 2px #000;
+  }
+
   /* .arrows a svg{
     height: 25;
     width: 25;

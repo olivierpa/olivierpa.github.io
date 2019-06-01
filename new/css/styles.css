@@ -271,39 +271,39 @@ body, html {
 
 .n01{
   /* background-color: #1A1A1A; */
-  background-image: url("../img/Regular2.jpg");
+  background-image: url("../img/regular2.jpg");
 }
 .n02{
   /* background-color: #1A1A1A; */
-  background-image: url("../img/Regular1.jpg");
+  background-image: url("../img/regular1.jpg");
 }
 .n0{
   /* background-color: #1A1A1A; */
-  background-image: url("../img/Regular.jpg");
+  background-image: url("../img/regular.jpg");
 }
 .n1{
-  background-image: url("../img/Lablaco.jpg");
+  background-image: url("../img/lablaco.jpg");
 }
 .n2{
-  background-image: url("../img/Parades.jpg");
+  background-image: url("../img/parades.jpg");
 }
 .n3{
-  background-image: url("../img/TRAS.jpg");
+  background-image: url("../img/tras.jpg");
 }
 .n4{
-  background-image: url("../img/ChronoPOP.jpg");
+  background-image: url("../img/chronopop.jpg");
 }
 .n5{
-  background-image: url("../img/Metabolisme.jpg");
+  background-image: url("../img/metabolisme.jpg");
 }
 .n6{
-  background-image: url("../img/IllNation.jpg");
+  background-image: url("../img/illnation.jpg");
 }
 .n7{
-  background-image: url("../img/Ads.jpg");
+  background-image: url("../img/ads.jpg");
 }
 .n8{
-  background-image: url("../img/Microdoc.jpg");
+  background-image: url("../img/microdoc.jpg");
 }
 
 #header{
@@ -504,35 +504,35 @@ section{
 }
 .preload { opacity: 0; position: absolute; top: -9999px; left: -9999px; }
 .backgroundLablaco{
-  background-image: url("../img/Lablaco.jpg");
+  background-image: url("../img/lablaco.jpg");
   border-left: 2px solid rgba(255, 255, 255, 0.5);
 }
 .backgroundParades{
-  background-image: url("../img/Parades.jpg");
+  background-image: url("../img/parades.jpg");
   border-left: 2px solid rgba(255, 255, 255, 0.5);
 }
 .backgroundTras{
-  background-image: url("../img/TRAS.jpg");
+  background-image: url("../img/tras.jpg");
   border-left: 2px solid rgba(255, 255, 255, 0.5);
 }
 .backgroundAds{
-  background-image: url("../img/Ads.jpg");
+  background-image: url("../img/ads.jpg");
   border-left: 2px solid rgba(255, 255, 255, 0.5);
 }
 .backgroundMicrodoc{
-  background-image: url("../img/Microdoc.jpg");
+  background-image: url("../img/microdoc.jpg");
   border-left: 2px solid rgba(255, 255, 255, 0.5);
 }
 .backgroundChronopop{
-  background-image: url("../img/ChronoPOP.jpg");
+  background-image: url("../img/chronopop.jpg");
   border-left: 2px solid rgba(255, 255, 255, 0.5);
 }
 .backgroundMetabolisme{
-  background-image: url("../img/Metabolisme.jpg");
+  background-image: url("../img/metabolisme.jpg");
   border-left: 2px solid rgba(255, 255, 255, 0.5);
 }
 .backgroundIllnation{
-  background-image: url("../img/IllNation.jpg");
+  background-image: url("../img/illnation.jpg");
   border-left: 2px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -561,22 +561,22 @@ section{
 }
 
 .illnationPage{
-  background-image: url("../img/IllNation_after.jpg");
+  background-image: url("../img/illnation_after.jpg");
 }
 .metabolismePage{
   background-image: url("../img/metabolisme_after.jpg");
 }
 .paradesPage{
-  background-image: url("../img/Parades_after.jpg");
+  background-image: url("../img/parades_after.jpg");
 }
 .adsPage{
-  background-image: url("../img/Ads_after.jpg");
+  background-image: url("../img/ads_after.jpg");
 }
 .microdocPage{
-  background-image: url("../img/Microdoc_after.jpg");
+  background-image: url("../img/microdoc_after.jpg");
 }
 .trasPage{
-  background-image: url("../img/Tras_after.jpg");
+  background-image: url("../img/tras_after.jpg");
 }
 
 
@@ -678,28 +678,28 @@ section{
 }
 }
 .nextLablaco{
-  background-image: url("../img/Lablaco_after.jpg");
+  background-image: url("../img/lablaco_after.jpg");
 }
 .nextParades{
-  background-image: url("../img/Parades_after.jpg");
+  background-image: url("../img/parades_after.jpg");
 }
 .nextTras{
-  background-image: url("../img/TRAS_after.jpg");
+  background-image: url("../img/tras_after.jpg");
 }
 .nextChronopop{
-  background-image: url("../img/ChronoPOP_after.jpg");
+  background-image: url("../img/chronopop_after.jpg");
 }
 .nextMetabolisme{
-  background-image: url("../img/Metabolisme_after.jpg");
+  background-image: url("../img/metabolisme_after.jpg");
 }
 .nextIllnation{
-  background-image: url("../img/IllNation_after.jpg");
+  background-image: url("../img/illnation_after.jpg");
 }
 .nextAds{
-  background-image: url("../img/Ads_after.jpg");
+  background-image: url("../img/ads_after.jpg");
 }
 .nextMicrodoc{
-  background-image: url("../img/Microdoc_after.jpg");
+  background-image: url("../img/microdoc_after.jpg");
 }
 
 .nextText{

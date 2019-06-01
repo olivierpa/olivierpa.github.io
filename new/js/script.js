@@ -73,7 +73,7 @@ $(document).ready(function() {
           $("#nameProjectPage").addClass("colorChange");
           $("#nav1").addClass("colorChange");
           $("#nav2").addClass("colorChange");
-          $("#logoProjectPage").attr("src", "../img/logoDark.svg");
+          $("#logoProjectPage").attr("src", "../img/logodark.svg");
         } else {
           $("#nameProjectPage").removeClass("colorChange");
           $("#nav1").removeClass("colorChange");

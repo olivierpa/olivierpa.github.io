@@ -300,7 +300,7 @@ body, html {
   background-image: url("../img/illnation.jpg");
 }
 .n7{
-  background-image: url("../img/ads.jpg");
+  background-image: url("../img/future.jpg");
 }
 .n8{
   background-image: url("../img/microdoc.jpg");
@@ -516,7 +516,7 @@ section{
   border-left: 2px solid rgba(255, 255, 255, 0.5);
 }
 .backgroundAds{
-  background-image: url("../img/ads.jpg");
+  background-image: url("../img/future.jpg");
   border-left: 2px solid rgba(255, 255, 255, 0.5);
 }
 .backgroundMicrodoc{
@@ -570,7 +570,7 @@ section{
   background-image: url("../img/parades_after.jpg");
 }
 .adsPage{
-  background-image: url("../img/ads_after.jpg");
+  background-image: url("../img/future_after.jpg");
 }
 .microdocPage{
   background-image: url("../img/microdoc_after.jpg");
@@ -696,7 +696,7 @@ section{
   background-image: url("../img/illnation_after.jpg");
 }
 .nextAds{
-  background-image: url("../img/ads_after.jpg");
+  background-image: url("../img/future_after.jpg");
 }
 .nextMicrodoc{
   background-image: url("../img/microdoc_after.jpg");

@@ -44,23 +44,61 @@ table {
 a {
     text-decoration: none;
 }
+
 @font-face {
-    font-family: "altero";
-    src: url(altero/Altero-Regular.otf);
-}
+  font-family: "Manrope";
+  src: url("manrope/manrope/manrope-extrabold.woff2") format("woff2"), /* Modern browsers */
+  url("manrope/manrope-extrabold.woff") format("woff"), /* Legacy browsers */
+  url("manrope/manrope-extrabold.otf") format("truetype"); /* Android, iOS */
+  font-style: normal;
+  font-weight: 800; }
 @font-face {
-    font-family: "anodina";
-    src: url(anodina/Anodina-Regular.otf);
-}
+  font-family: "Manrope";
+  src: url("manrope/manrope-bold.woff2") format("woff2"),
+  url("manrope/manrope-bold.woff") format("woff"),
+  url("manrope/manrope-bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: 700; }
 @font-face {
-    font-family: "anodina";
-    src: url(anodina/Anodina-ExtraBold.otf);
-    font-weight: bold;
-}
+  font-family: "Manrope";
+  src: url("manrope/manrope-semibold.woff2") format("woff2"),
+  url("manrope/manrope-semibold.woff") format("woff"),
+  url("manrope/manrope-semibold.otf") format("truetype");
+  font-style: normal;
+  font-weight: 600; }
 @font-face {
-    font-family: "anodina";
-    src: url(anodina/Anodina-ExtraLight.otf);
-    font-weight: lighter;
+  font-family: "Manrope";
+  src: url("manrope/manrope-medium.woff2") format("woff2"),
+  url("manrope/manrope-medium.woff") format("woff"),
+  url("manrope/manrope-medium.otf") format("truetype");
+  font-style: normal;
+  font-weight: 500; }
+@font-face {
+  font-family: "Manrope";
+  src: url("manrope/manrope-regular.woff2") format("woff2"),
+  url("manrope/manrope-regular.woff") format("woff"),
+  url("manrope/manrope-regular.otf") format("truetype");
+  font-style: normal;
+  font-weight: 400; }
+@font-face {
+  font-family: "Manrope";
+  src: url("manrope/manrope-light.woff2") format("woff2"),
+  url("manrope/manrope-light.woff") format("woff"),
+  url("manrope/manrope-light.otf") format("truetype");
+  font-style: normal;
+  font-weight: 300; }
+@font-face {
+  font-family: "Manrope";
+  src: url("manrope/manrope-thin.woff2") format("woff2"),
+  url("manrope/manrope-thin.woff") format("woff"),
+  url("manrope/manrope-thin.otf") format("truetype");
+  font-style: normal;
+  font-weight: 200; }
+
+@font-face {
+  font-family: "HelveticaNow";
+  src: url("helveticanow/helveticanow.otf") format("truetype");
+  font-style: normal;
 }
 
 b{
@@ -69,9 +107,15 @@ b{
 
 body, html {
   height: 100%;
-  font-family: "anodina", sans-serif;
+  font-family: "Manrope",sans-serif;
+  font-weight: 500;
   scroll-behavior: smooth;
-  color: #fff;
+  color: #353535;
+}
+*,*:before,*:after {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 @media only screen and (min-width: 768px) {
@@ -143,6 +187,20 @@ body, html {
     max-width: 68% !important;
     margin-left: 16% !important;
   }
+
+  .project{
+    width: 36% !important;
+    padding: 2% !important;
+    margin: 0 !important;
+    min-width: 0% !important;
+  }
+
+  .leftDiv{
+    margin: 0 4.5% 9% 9% !important;
+  }
+  .rightDiv{
+    margin: 0 9% 9% 4.5% !important;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -207,26 +265,25 @@ body, html {
     white-space: nowrap;
   }
 
-  .divBackground{
+  /* .divBackground{
     background-image: none !important;
-  }
-  .project{
+  } */
+  /* .project{
     background-color: #1fe0 !important;
     border-radius: 0 !important;
     width: 100% !important;
     margin-bottom: 0 !important;
     border: none !important;
-  }
+  } */
   .project h1{
     text-decoration: none !important;
-    text-transform: lowercase !important;
   }
   .project p{
-    display: none;
-    padding: 0 15%;
+    /* display: none; */
+    /* padding: 0 15%; */
   }
   .project:hover h1{
-    text-transform: uppercase !important;
+
   }
   .project:hover p{
     display: block;
@@ -241,6 +298,9 @@ body, html {
   #logoProjectPage{
     display: none;
   }
+  .topPic{
+    margin: 5% auto 0 auto !important;
+  }
 
   #name{
     display: block !important;
@@ -249,10 +309,6 @@ body, html {
   #nameProjectPage{
     display: block !important;
     font-size: calc(3vw*0.5) !important;
-  }
-
-  .part{
-    margin-top: 5%;
   }
 }
 
@@ -271,15 +327,15 @@ body, html {
 
 .n01{
   /* background-color: #1A1A1A; */
-  background-image: url("../img/regular2.jpg");
+  background-image: url("../img/regularlight.svg");
 }
 .n02{
   /* background-color: #1A1A1A; */
-  background-image: url("../img/regular1.jpg");
+  background-image: url("../img/regularlight.svg");
 }
 .n0{
-  /* background-color: #1A1A1A; */
-  background-image: url("../img/regular.jpg");
+  /* background-color: #ffffff; */
+  background-image: url("../img/regularlight.svg");
 }
 .n1{
   background-image: url("../img/lablaco.jpg");
@@ -314,28 +370,28 @@ body, html {
   z-index: 2;
 }
 
-.colorChange{
-  color: #1A1A1A !important;
-}
+/* .colorChange{
+  color: #fff !important;
+} */
 
 .active{
   font-weight: bold;
   text-decoration: underline;
 }
 .active:hover{
-  color: #fff !important;
+  color: #353535 !important;
 }
 
 #logo{
   position: absolute;
-  width: 2.5em;
+  width: 6%;
   left: 3%;
   top: 50%;
   transform: translateY(-50%);
 }
 #logoProjectPage{
   position: absolute;
-  width: 2.5em;
+  width: 6%;
   left: 3%;
   top: 50%;
   transform: translateY(-50%);
@@ -347,7 +403,7 @@ body, html {
   top: 50%;
   transform: translateY(-50%);
   display: none;
-  color: #fff;
+  color: #353535;
 }
 #nameProjectPage{
   position: absolute;
@@ -355,7 +411,7 @@ body, html {
   top: 50%;
   transform: translateY(-50%);
   display: none;
-  color: #fff;
+  color: #353535;
 }
 
 .link{
@@ -365,11 +421,11 @@ body, html {
   transform: translateY(-50%);
 }
 .link a{
-  color: #fff;
+  color: #353535;
   font-size: 3vw;
 }
 .link a:hover{
-  color: #ddd;
+  color: #7DB9FF;
 }
 .link :first-child{
   padding-right: 50px;
@@ -380,9 +436,10 @@ section{
 }
 
 .typewrite{
-  font-family: "altero", sans-serif;
+  font-family: "HelveticaNow", sans-serif;
   font-size: 7vw;
   position: absolute;
+  text-align: left;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -392,35 +449,63 @@ section{
 #work{
   position: absolute;
   top: 100vh;
-  width: 100%;
+  width: 100vw;
+  padding-top: 7%;
 }
-#work a{
-  color: #fff;
+.project .insideText{
+  color: #353535;
+  position: absolute;
+  width: 60%;
 }
 
 .project{
-  text-align: center;
+  text-align: left;
+  position: relative;
+  display: inline-block;
   margin : 0 auto;
-  width: 95%;
-  padding: 5%;
+  /* width: 36%; */
+  /* padding: 5%; */
   line-height: 150%;
-  margin-bottom: 5%;
+  /* margin: 0 4.5% 9% 4.5%; */
+  margin: 0 3% 3% 3%;
+  border-radius: 13px;
+  min-width: 94%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .25);
+}
+.project:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.project:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.99) translate(5px, 5px);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+}
+
+.insideText{
+  position: absolute;
+  left: 5%;
+  top: 5%;
 }
 .project h1{
-  font-family: "altero", sans-serif;
+  font-family: "HelveticaNow", sans-serif;
   text-decoration: underline;
-  margin-bottom: 1%;
+  margin-bottom: 3%;
   font-size: 5vw;
 }
 .project h2{
-  font-family: "altero", sans-serif;
-  display: none;
+  /* display: none; */
   font-size: 3vw;
+  opacity: 0.6;
+  margin-bottom: 6%;
 }
 .project p{
-  margin-top: 1.5%;
+  /* margin-top: 1.5%; */
   font-size: 3vw;
   font-weight: bold;
+  /* max-width: 60%; */
 }
 
 #footer{
@@ -436,7 +521,7 @@ section{
   transform: translate(-50%, -50%);
 }
 #hello h1{
-  font-family: "altero", sans-serif;
+  font-family: "HelveticaNow", sans-serif;
   font-size: 7vw;
 }
 #contact{
@@ -446,11 +531,11 @@ section{
 }
 #contact a{
   /* color: #B2BBE4; */
-  color: #fff;
+  color: #353535;
   text-decoration: underline;
 }
 #contact a:hover{
-  color: #ddd;
+  color: #7DB9FF;
 }
 #note{
   position: absolute;
@@ -468,8 +553,8 @@ section{
 .tooltiptext {
   display: none;
   width: 150px;
-  background-color: #B2BBE4;
-  color: #fff;
+  background-color: #7DB9FF;
+  color: #353535;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
@@ -499,58 +584,75 @@ section{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   overflow:auto;
 }
 .preload { opacity: 0; position: absolute; top: -9999px; left: -9999px; }
 .backgroundLablaco{
-  background-image: url("../img/lablaco.jpg");
-  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  background-image: url("../img/lablacoimg.jpg");
+  /* border-left: 2px solid rgba(255, 255, 255, 0.5); */
 }
+/* .backgroundLablaco:hover{
+  background-image: url("../img/lablacohover.jpg");
+} */
 .backgroundParades{
-  background-image: url("../img/parades.jpg");
-  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  background-image: url("../img/paradesimg.jpg");
+}
+.backgroundParades:hover{
+  background-image: url("../img/paradeshover.jpg");
 }
 .backgroundTras{
-  background-image: url("../img/tras.jpg");
-  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  background-image: url("../img/trasimg.jpg");
 }
+.backgroundTras:hover{
+  background-image: url("../img/trashover.jpg");
+}
+.backgroundChronopop{
+  background-image: url("../img/chronopopimg.jpg");
+}
+/* .backgroundChronopop:hover{
+  background-image: url("../img/chronopophover.jpg");
+} */
+.backgroundMetabolisme{
+  background-image: url("../img/metabolismeimg.jpg");
+}
+.backgroundMetabolisme:hover{
+  background-image: url("../img/metabolismehover.jpg");
+}
+.backgroundIllnation{
+  background-image: url("../img/illnationimg.jpg");
+}
+.backgroundIllnation:hover{
+  background-image: url("../img/illnationhover.jpg");
+}
+
 .backgroundAds{
   background-image: url("../img/future.jpg");
-  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  /* border-left: 2px solid rgba(255, 255, 255, 0.5); */
 }
 .backgroundMicrodoc{
   background-image: url("../img/microdoc.jpg");
-  border-left: 2px solid rgba(255, 255, 255, 0.5);
-}
-.backgroundChronopop{
-  background-image: url("../img/chronopop.jpg");
-  border-left: 2px solid rgba(255, 255, 255, 0.5);
-}
-.backgroundMetabolisme{
-  background-image: url("../img/metabolisme.jpg");
-  border-left: 2px solid rgba(255, 255, 255, 0.5);
-}
-.backgroundIllnation{
-  background-image: url("../img/illnation.jpg");
-  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  /* border-left: 2px solid rgba(255, 255, 255, 0.5); */
 }
 
 /* Project Pages */
 
 .topPic{
-  height: 50vh;
+  height: 45vh;
+  width: 95vw;
 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   overflow:auto;
 
   position: relative;
+  margin: 3.5% auto 0 auto;
+  border-radius: 13px;
 }
 .topPic h1{
-  font-family: "altero", sans-serif;
+  font-family: "HelveticaNow", sans-serif;
   font-size: 7vw;
   text-align: center;
 
@@ -561,24 +663,29 @@ section{
 }
 
 .illnationPage{
-  background-image: url("../img/illnation_after.jpg");
+  background-image: url("../img/illnationpage.jpg");
 }
 .metabolismePage{
-  background-image: url("../img/metabolisme_after.jpg");
+  background-image: url("../img/metabolismepage.jpg");
 }
 .paradesPage{
-  background-image: url("../img/parades_after.jpg");
-}
-.adsPage{
-  background-image: url("../img/future_after.jpg");
-}
-.microdocPage{
-  background-image: url("../img/microdoc_after.jpg");
+  background-image: url("../img/paradespage.jpg");
 }
 .trasPage{
-  background-image: url("../img/tras_after.jpg");
+  background-image: url("../img/traspage.jpg");
 }
-
+.lablacoPage{
+  background-image: url("../img/lablacopage.jpg");
+}
+.chronopopPage{
+  background-image: url("../img/chronopoppage.jpg");
+}
+.adsPage{
+  background-image: url("../img/futurepage.jpg");
+}
+.microdocPage{
+  background-image: url("../img/microdocpage.jpg");
+}
 
 .textContainer{
   width: 100%;
@@ -591,16 +698,16 @@ section{
 }
 .projectInfo p{
   font-size: 3vw;
-  color: #1A1A1A;
+  color: #353535;
   line-height: 150%;
 }
 .titleInfo{
-  font-family: "altero", sans-serif;
+  font-family: "HelveticaNow", sans-serif;
   font-size: 3vw;
-  color: #1A1A1A;
-  border-left: 2px solid #1A1A1A;
+  color: #353535;
+  border-left: 2px solid #353535;
   margin-top: 8%;
-  padding-left: 0.5%;
+  padding-left: 1%;
 }
 
 .userInfo{
@@ -611,34 +718,37 @@ section{
 }
 .userInfo p{
   font-size: 3vw;
-  color: #1A1A1A;
+  color: #353535;
   line-height: 150%;
 }
 
 .projectFooter{
-  color: #1A1A1A;
+  color: #353535;
 }
 
 .projectFooter #contact a{
-  color: #1A1A1A;
+  color: #353535;
   text-decoration: underline;
 }
 .projectFooter #contact a:hover{
-  color: #555;
+  color: #7DB9FF;
 }
 
 .part{
   width: 100%;
   text-align: center;
-  color: #1A1A1A;
+  color: #353535;
+  margin-top: 5%;
 }
 .part img{
   max-width: 94%;
   margin: 5% 0;
+  border-radius: 13px;
 }
 .part video{
   max-width: 94%;
   margin: 5% 0;
+  border-radius: 13px;
 }
 
 .lastImg{
@@ -652,15 +762,15 @@ section{
 }
 
 .paragraphTitle{
-  font-family: "altero", sans-serif;
+  font-family: "HelveticaNow", sans-serif;
   font-size: 5vw;
-  color: #1A1A1A;
-  border-left: 2px solid #1A1A1A;
+  color: #353535;
+  border-left: 2px solid #353535;
   margin-bottom: 1%;
   padding-left: 0.5%;
 }
 .paragraph p{
-  font-size: 4vw;
+  font-size: 3vw;
   line-height: 150%;
 }
 
@@ -676,30 +786,30 @@ section{
 
   position: relative;
 }
-}
+
 .nextLablaco{
-  background-image: url("../img/lablaco_after.jpg");
+  background-image: url("../img/lablacopageend.jpg");
 }
 .nextParades{
-  background-image: url("../img/parades_after.jpg");
+  background-image: url("../img/paradespageend.jpg");
 }
 .nextTras{
-  background-image: url("../img/tras_after.jpg");
+  background-image: url("../img/traspageend.jpg");
 }
 .nextChronopop{
-  background-image: url("../img/chronopop_after.jpg");
+  background-image: url("../img/chronopoppageend.jpg");
 }
 .nextMetabolisme{
-  background-image: url("../img/metabolisme_after.jpg");
+  background-image: url("../img/metabolismepageend.jpg");
 }
 .nextIllnation{
-  background-image: url("../img/illnation_after.jpg");
+  background-image: url("../img/illnationpageend.jpg");
 }
 .nextAds{
-  background-image: url("../img/future_after.jpg");
+  background-image: url("../img/futurepageend.jpg");
 }
 .nextMicrodoc{
-  background-image: url("../img/microdoc_after.jpg");
+  background-image: url("../img/microdocpageend.jpg");
 }
 
 .nextText{
@@ -707,43 +817,43 @@ section{
   left: 3%;
   top: 50%;
   transform: translateY(-50%);
-  color: #fff;
+  color: #353535;
 }
 
 #nextName{
-  font-family: "altero", sans-serif;
+  font-family: "HelveticaNow", sans-serif;
   font-size: 5vw;
-  color: #fff;
+  color: #353535;
   margin-top: 1%;
 }
 
 .aboutHeader a{
-  color: #1A1A1A;
+  color: #353535;
 }
 .aboutHeader a:hover{
-  color: #555;
+  color: #7DB9FF;
 }
 .aboutHeader #name{
-  color: #1A1A1A;
+  color: #353535;
 }
 
 #coming{
   text-align: center;
-  color: #1A1A1A;
+  color: #353535;
 }
 
 #coming h1{
-  font-family: "altero", sans-serif;
+  font-family: "HelveticaNow", sans-serif;
   font-size: 7vw;
   text-align: center;
 }
 #coming a{
-  color: #1A1A1A;
+  color: #353535;
   text-decoration: underline;
   font-size: 3vw;
 }
 #coming a:hover{
-  color: #555;
+  color: #7DB9FF;
 }
 
 .comingText{

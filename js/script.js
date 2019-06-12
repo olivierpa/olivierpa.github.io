@@ -52,7 +52,7 @@ $(document).ready(function() {
         // INJECT CSS
         var css = document.createElement("style");
         css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #353535}";
         document.body.appendChild(css);
     };
 
@@ -66,110 +66,110 @@ $(document).ready(function() {
         }
     });
 
-    $(window).scroll(function(){
-        var ScrollTop = parseInt($(window).scrollTop());
-
-        if (ScrollTop > 44 * window.innerHeight/100) {
-          $("#nameProjectPage").addClass("colorChange");
-          $("#nav1").addClass("colorChange");
-          $("#nav2").addClass("colorChange");
-          $("#logoProjectPage").attr("src", "../img/logodark.svg");
-        } else {
-          $("#nameProjectPage").removeClass("colorChange");
-          $("#nav1").removeClass("colorChange");
-          $("#nav2").removeClass("colorChange");
-          $("#logoProjectPage").attr("src", "../img/logo.svg");
-        }
-    });
+    // $(window).scroll(function(){
+    //     var ScrollTop = parseInt($(window).scrollTop());
+    //
+    //     if (ScrollTop < 44 * window.innerHeight/100) {
+    //       $("#nameProjectPage").addClass("colorChange");
+    //       $("#nav1").addClass("colorChange");
+    //       $("#nav2").addClass("colorChange");
+    //       $("#logoProjectPage").attr("src", "../img/logo.svg");
+    //     } else {
+    //       $("#nameProjectPage").removeClass("colorChange");
+    //       $("#nav1").removeClass("colorChange");
+    //       $("#nav2").removeClass("colorChange");
+    //       $("#logoProjectPage").attr("src", "../img/logodark.svg");
+    //     }
+    // });
 
     new ClipboardJS('#emailBtn');
 
-    // $( "#lablaco" ).hover(function() {
-    //   $('body').toggleClass('n1');
+    // // $( "#lablaco" ).hover(function() {
+    // //   $('body').toggleClass('n1');
+    // //   $('body').toggleClass('n0');
+    // //   $('#parades').toggleClass('backgroundParades');
+    // //   $('#tras').toggleClass('backgroundTras');
+    // //   $('#ads').toggleClass('backgroundAds');
+    // //   $('#microdoc').toggleClass('backgroundMicrodoc');
+    // //   $('#chronopop').toggleClass('backgroundChronopop');
+    // //   $('#metabolisme').toggleClass('backgroundMetabolisme');
+    // //   $('#illnation').toggleClass('backgroundIllnation');
+    // // });
+    // $( "#parades" ).hover(function() {
+    //   $('body').toggleClass('n2');
     //   $('body').toggleClass('n0');
+    //   // $('#lablaco').toggleClass('backgroundLablaco');
+    //   $('#tras').toggleClass('backgroundTras');
+    //   $('#ads').toggleClass('backgroundAds');
+    //   $('#microdoc').toggleClass('backgroundMicrodoc');
+    //   // $('#chronopop').toggleClass('backgroundChronopop');
+    //   $('#metabolisme').toggleClass('backgroundMetabolisme');
+    //   $('#illnation').toggleClass('backgroundIllnation');
+    // });
+    // $( "#tras" ).hover(function() {
+    //   $('body').toggleClass('n3');
+    //   $('body').toggleClass('n0');
+    //   // $('#lablaco').toggleClass('backgroundLablaco');
+    //   $('#parades').toggleClass('backgroundParades');
+    //   $('#ads').toggleClass('backgroundAds');
+    //   $('#microdoc').toggleClass('backgroundMicrodoc');
+    //   // $('#chronopop').toggleClass('backgroundChronopop');
+    //   $('#metabolisme').toggleClass('backgroundMetabolisme');
+    //   $('#illnation').toggleClass('backgroundIllnation');
+    // });
+    // // $( "#chronopop" ).hover(function() {
+    // //   $('body').toggleClass('n4');
+    // //   $('body').toggleClass('n0');
+    // //   $('#lablaco').toggleClass('backgroundLablaco');
+    // //   $('#parades').toggleClass('backgroundParades');
+    // //   $('#tras').toggleClass('backgroundTras');
+    // //   $('#ads').toggleClass('backgroundAds');
+    // //   $('#microdoc').toggleClass('backgroundMicrodoc');
+    // //   $('#metabolisme').toggleClass('backgroundMetabolisme');
+    // //   $('#illnation').toggleClass('backgroundIllnation');
+    // // });
+    // $( "#metabolisme" ).hover(function() {
+    //   $('body').toggleClass('n5');
+    //   $('body').toggleClass('n0');
+    //   // $('#lablaco').toggleClass('backgroundLablaco');
     //   $('#parades').toggleClass('backgroundParades');
     //   $('#tras').toggleClass('backgroundTras');
     //   $('#ads').toggleClass('backgroundAds');
     //   $('#microdoc').toggleClass('backgroundMicrodoc');
-    //   $('#chronopop').toggleClass('backgroundChronopop');
-    //   $('#metabolisme').toggleClass('backgroundMetabolisme');
+    //   // $('#chronopop').toggleClass('backgroundChronopop');
     //   $('#illnation').toggleClass('backgroundIllnation');
     // });
-    $( "#parades" ).hover(function() {
-      $('body').toggleClass('n2');
-      $('body').toggleClass('n0');
-      // $('#lablaco').toggleClass('backgroundLablaco');
-      $('#tras').toggleClass('backgroundTras');
-      $('#ads').toggleClass('backgroundAds');
-      $('#microdoc').toggleClass('backgroundMicrodoc');
-      // $('#chronopop').toggleClass('backgroundChronopop');
-      $('#metabolisme').toggleClass('backgroundMetabolisme');
-      $('#illnation').toggleClass('backgroundIllnation');
-    });
-    $( "#tras" ).hover(function() {
-      $('body').toggleClass('n3');
-      $('body').toggleClass('n0');
-      // $('#lablaco').toggleClass('backgroundLablaco');
-      $('#parades').toggleClass('backgroundParades');
-      $('#ads').toggleClass('backgroundAds');
-      $('#microdoc').toggleClass('backgroundMicrodoc');
-      // $('#chronopop').toggleClass('backgroundChronopop');
-      $('#metabolisme').toggleClass('backgroundMetabolisme');
-      $('#illnation').toggleClass('backgroundIllnation');
-    });
-    // $( "#chronopop" ).hover(function() {
-    //   $('body').toggleClass('n4');
+    // $( "#illnation" ).hover(function() {
+    //   $('body').toggleClass('n6');
     //   $('body').toggleClass('n0');
-    //   $('#lablaco').toggleClass('backgroundLablaco');
+    //   // $('#lablaco').toggleClass('backgroundLablaco');
     //   $('#parades').toggleClass('backgroundParades');
     //   $('#tras').toggleClass('backgroundTras');
     //   $('#ads').toggleClass('backgroundAds');
     //   $('#microdoc').toggleClass('backgroundMicrodoc');
+    //   // $('#chronopop').toggleClass('backgroundChronopop');
+    //   $('#metabolisme').toggleClass('backgroundMetabolisme');
+    // });
+    // $( "#ads" ).hover(function() {
+    //   $('body').toggleClass('n7');
+    //   $('body').toggleClass('n0');
+    //   // $('#lablaco').toggleClass('backgroundLablaco');
+    //   $('#parades').toggleClass('backgroundParades');
+    //   $('#tras').toggleClass('backgroundTras');
+    //   $('#microdoc').toggleClass('backgroundMicrodoc');
+    //   // $('#chronopop').toggleClass('backgroundChronopop');
+    //   $('#illnation').toggleClass('backgroundIllnation');
+    //   $('#metabolisme').toggleClass('backgroundMetabolisme');
+    // });
+    // $( "#microdoc" ).hover(function() {
+    //   $('body').toggleClass('n8');
+    //   $('body').toggleClass('n0');
+    //   // $('#lablaco').toggleClass('backgroundLablaco');
+    //   $('#parades').toggleClass('backgroundParades');
+    //   $('#tras').toggleClass('backgroundTras');
+    //   $('#ads').toggleClass('backgroundAds');
+    //   // $('#chronopop').toggleClass('backgroundChronopop');
     //   $('#metabolisme').toggleClass('backgroundMetabolisme');
     //   $('#illnation').toggleClass('backgroundIllnation');
     // });
-    $( "#metabolisme" ).hover(function() {
-      $('body').toggleClass('n5');
-      $('body').toggleClass('n0');
-      // $('#lablaco').toggleClass('backgroundLablaco');
-      $('#parades').toggleClass('backgroundParades');
-      $('#tras').toggleClass('backgroundTras');
-      $('#ads').toggleClass('backgroundAds');
-      $('#microdoc').toggleClass('backgroundMicrodoc');
-      // $('#chronopop').toggleClass('backgroundChronopop');
-      $('#illnation').toggleClass('backgroundIllnation');
-    });
-    $( "#illnation" ).hover(function() {
-      $('body').toggleClass('n6');
-      $('body').toggleClass('n0');
-      // $('#lablaco').toggleClass('backgroundLablaco');
-      $('#parades').toggleClass('backgroundParades');
-      $('#tras').toggleClass('backgroundTras');
-      $('#ads').toggleClass('backgroundAds');
-      $('#microdoc').toggleClass('backgroundMicrodoc');
-      // $('#chronopop').toggleClass('backgroundChronopop');
-      $('#metabolisme').toggleClass('backgroundMetabolisme');
-    });
-    $( "#ads" ).hover(function() {
-      $('body').toggleClass('n7');
-      $('body').toggleClass('n0');
-      // $('#lablaco').toggleClass('backgroundLablaco');
-      $('#parades').toggleClass('backgroundParades');
-      $('#tras').toggleClass('backgroundTras');
-      $('#microdoc').toggleClass('backgroundMicrodoc');
-      // $('#chronopop').toggleClass('backgroundChronopop');
-      $('#illnation').toggleClass('backgroundIllnation');
-      $('#metabolisme').toggleClass('backgroundMetabolisme');
-    });
-    $( "#microdoc" ).hover(function() {
-      $('body').toggleClass('n8');
-      $('body').toggleClass('n0');
-      // $('#lablaco').toggleClass('backgroundLablaco');
-      $('#parades').toggleClass('backgroundParades');
-      $('#tras').toggleClass('backgroundTras');
-      $('#ads').toggleClass('backgroundAds');
-      // $('#chronopop').toggleClass('backgroundChronopop');
-      $('#metabolisme').toggleClass('backgroundMetabolisme');
-      $('#illnation').toggleClass('backgroundIllnation');
-    });
 });

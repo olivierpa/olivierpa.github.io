@@ -587,7 +587,7 @@ section{
   /* background-attachment: fixed; */
   overflow:auto;
 }
-.preload { opacity: 0; position: absolute; top: -9999px; left: -9999px; }
+
 .backgroundLablaco{
   background-image: url("../img/lablacoimg.jpg");
   /* border-left: 2px solid rgba(255, 255, 255, 0.5); */

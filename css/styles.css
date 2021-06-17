@@ -152,7 +152,7 @@ body, html {
     font-size: calc(2.5vw*0.7) !important;
   }
   .userInfo p{
-    font-size: calc(3vw*0.7) !important;
+    font-size: calc(2.5vw*0.7) !important;
   }
   .titleInfo{
     font-size: calc(3vw*0.7) !important;
@@ -236,7 +236,7 @@ body, html {
     font-size: calc(2.5vw*0.5) !important;
   }
   .userInfo p{
-    font-size: calc(3vw*0.5) !important;
+    font-size: calc(2.5vw*0.5) !important;
   }
   .titleInfo{
     font-size: calc(3vw*0.5) !important;
@@ -435,6 +435,13 @@ section{
   height: 100vh;
 }
 
+.infos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 3% 3%;
+}
+
 .typewrite{
   font-family: "HelveticaNow", sans-serif;
   font-size: 7vw;
@@ -625,6 +632,12 @@ section{
 .backgroundIllnation:hover{
   background-image: url("../img/illnationhover.jpg");
 }
+.backgroundWgt{
+  background-image: url("../img/wgtimg.jpg");
+}
+.backgroundWgt:hover{
+  background-image: url("../img/wgthover.jpg");
+}
 
 .backgroundAds{
   background-image: url("../img/future.jpg");
@@ -662,6 +675,9 @@ section{
   transform: translate(-50%, -50%);
 }
 
+.wgtPage{
+  background-image: url("../img/wgtpage.jpg");
+}
 .illnationPage{
   background-image: url("../img/illnationpage.jpg");
 }
@@ -690,31 +706,28 @@ section{
 .textContainer{
   width: 100%;
 }
+
 .projectInfo{
-  margin-left: 3%;
-  margin-top: 1%;
-  width: 40%;
-  float: left;
+  flex-basis: 40%;
 }
 .projectInfo p{
   font-size: 3vw;
   color: #353535;
   line-height: 150%;
+  margin-bottom: 5%;
+  min-width: 300px;
 }
+
 .titleInfo{
   font-family: "HelveticaNow", sans-serif;
   font-size: 3vw;
   color: #353535;
   border-left: 2px solid #353535;
-  margin-top: 8%;
-  padding-left: 1%;
+  padding-left: 3px;
 }
 
 .userInfo{
-  margin-right: 3%;
-  margin-top: 1%;
-  width: 40%;
-  float: right;
+  flex-basis: 40%;
 }
 .userInfo p{
   font-size: 3vw;
@@ -787,6 +800,9 @@ section{
   position: relative;
 }
 
+.nextWgt{
+  background-image: url("../img/wgtpageend.jpg");
+}
 .nextLablaco{
   background-image: url("../img/lablacopageend.jpg");
 }

@@ -312,8 +312,15 @@ body, html {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 531px) {
+  .userInfo{
+    flex-basis: 100% !important;
+  }
 
+  section{
+    height: auto !important;
+    margin-bottom: 15%;
+  }
 }
 
 .background{
@@ -325,6 +332,9 @@ body, html {
   transition: background-image .2s ease-in-out;
 }
 
+.bx{
+  font-size: 18px;
+}
 .n01{
   /* background-color: #1A1A1A; */
   background-image: url("../img/regularlight.svg");
@@ -638,6 +648,12 @@ section{
 .backgroundWgt:hover{
   background-image: url("../img/wgthover.jpg");
 }
+.backgroundHalomax{
+  background-image: url("../img/halomaximg.jpg");
+}
+.backgroundHalomax:hover{
+  background-image: url("../img/halomaxhover.jpg");
+}
 
 .backgroundAds{
   background-image: url("../img/future.jpg");
@@ -675,6 +691,9 @@ section{
   transform: translate(-50%, -50%);
 }
 
+.halomaxPage{
+  background-image: url("../img/halomaxpage.jpg");
+}
 .wgtPage{
   background-image: url("../img/wgtpage.jpg");
 }
@@ -800,6 +819,9 @@ section{
   position: relative;
 }
 
+.nextHalomax{
+  background-image: url("../img/halomaxpageend.jpg");
+}
 .nextWgt{
   background-image: url("../img/wgtpageend.jpg");
 }

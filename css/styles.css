@@ -627,9 +627,9 @@ section{
 .backgroundChronopop{
   background-image: url("../img/chronopopimg.jpg");
 }
-/* .backgroundChronopop:hover{
+.backgroundChronopop:hover{
   background-image: url("../img/chronopophover.jpg");
-} */
+}
 .backgroundMetabolisme{
   background-image: url("../img/metabolismeimg.jpg");
 }
